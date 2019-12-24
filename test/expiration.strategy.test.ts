@@ -1,5 +1,5 @@
 import * as Assert from 'assert'
-import { ExpirationStrategy, MemoryStorage } from '../src'
+import { ExpirationStrategy, MemoryStorage } from '@node-ts-cache'
 
 interface ITestType {
     user: {

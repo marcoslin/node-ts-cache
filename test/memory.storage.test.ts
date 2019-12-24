@@ -1,5 +1,5 @@
 import * as Assert from 'assert'
-import { MemoryStorage } from '../src'
+import { MemoryStorage } from '@node-ts-cache'
 
 describe('MemoryStorage', () => {
     it('Should add cache item correctly', async () => {

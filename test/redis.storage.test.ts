@@ -1,7 +1,7 @@
 import * as Proxyquire from 'proxyquire'
 import * as Sinon from 'sinon'
 import * as Assert from 'assert'
-import { RedisStorage } from '../src'
+import { RedisStorage } from '@node-ts-cache'
 
 Proxyquire.noCallThru()
 

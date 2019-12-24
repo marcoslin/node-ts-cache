@@ -1,0 +1,14 @@
+{
+    "extends": "../tsconfig.base.json",
+    "compilerOptions": {
+      "rootDirs": [ "." ],
+      "baseUrl": "./",
+      "paths": {
+        "@node-ts-cache": ["../src"],
+        "@node-ts-cache/*": ["../src/*"]
+      }
+    },
+    "include": [
+        "./"
+    ]
+  }
