@@ -15,7 +15,7 @@ export class RedisStorage implements StorageTypes {
         this.client = Redis.createClient(this.redisOptions)
     }
 
-    public async getItem<T>(key: string): Promise<T> {
+    public async getItem<T>(key: string): Promise<T|undefined> {
         const entry: any = await this.client.getAsync!!(key)
         let finalItem = entry
         try {

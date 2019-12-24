@@ -7,8 +7,12 @@ export class MemoryStorage implements StorageTypes {
     constructor() {
     }
 
-    public async getItem<T>(key: string): Promise<T> {
-        return this.memCache[key]
+    public async getItem<T>(key: string): Promise<T|undefined> {
+        if (key in this.memCache) {
+            return this.memCache[key]
+        } else {
+            return undefined
+        }
     }
 
     public async setItem(key: string, content: any): Promise<void> {

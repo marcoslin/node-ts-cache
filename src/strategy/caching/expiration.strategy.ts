@@ -21,7 +21,7 @@ export class ExpirationStrategy extends AbstractBaseStrategy {
         super(storage)
     }
 
-    public async getItem<T>(key: string): Promise<T|void> {
+    public async getItem<T>(key: string): Promise<T|undefined> {
         const item = await this.storage.getItem<IExpiringCacheItem>(key)
         if (item && item.meta && item.meta.ttl && this.isItemExpired(item)) {
             await this.storage.setItem(key, undefined)

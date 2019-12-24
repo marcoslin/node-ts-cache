@@ -6,7 +6,7 @@ export abstract class AbstractBaseStrategy implements ICacheStrategy {
     constructor(protected storage: StorageTypes) {
     }
 
-    public async abstract getItem<T>(key: string): Promise<T|void>;
+    public async abstract getItem<T>(key: string): Promise<T|undefined>;
 
     public async abstract setItem(key: string, content: any, options: any): Promise<void>;
 
